@@ -1,0 +1,121 @@
+
+body{
+  display: flex;
+  height: 100vh;
+  background-color: #0099FF;
+  font-family: Roboto;
+  color:white;
+}
+
+/*textfield*/
+
+.mds-text-field__input{
+padding: 10px;
+outline:0;
+font-size: 16px;
+border:0;
+border-bottom: 1px solid #ccc;
+background-color: #0099FF;
+color:white;
+}
+
+.mds-text-field {
+  position: relative;
+  margin:auto;
+}
+
+.mds-text-field__label {
+  position: absolute;
+  transition: all .2s ease-in-out;
+  top: 10px;
+  left: 10px;
+  pointer-events: none;
+  color: white;
+  opacity: 0.7;
+
+}
+
+.mds-text-field__label.active{
+  top: -15px;
+  left: 3px;
+  transform: translate(0, 16px) scale(1);
+  transform: translate(0, -2px) scale(.65);
+  color:white;
+  opacity: 1;
+}
+
+.mds-text-field__underline {
+  width: 0%;
+  height: 1px;
+  background: white;
+  display: block;
+  transition: all 150ms ease-out;
+}
+
+.mds-text-field__underline.active {
+  width:100%;
+}
+
+
+/* SWITCH */
+.switch-input {
+  display: none;
+}
+.switch-label {
+  position: relative;
+  display: inline-block;
+  min-width: 112px;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: left;
+  margin: auto;
+  padding: 25px 0 16px 44px;
+}
+.switch-label:before, .switch-label:after {
+  content: "";
+  position: absolute;
+  margin: 0;
+  outline: 0;
+  top: 50%;
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.switch-label:before {
+  left: 1px;
+  width: 34px;
+  height: 14px;
+  background-color: #9E9E9E;
+  border-radius: 8px;
+}
+.switch-label:after {
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FAFAFA;
+  border-radius: 50%;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+}
+.switch-label .toggle--on {
+  display: none;
+}
+.switch-label .toggle--off {
+  display: inline-block;
+}
+.switch-input:checked + .switch-label:before {
+  background-color: grey;
+}
+.switch-input:checked + .switch-label:after {
+  background-color: #0080FF;
+  -ms-transform: translate(80%, -50%);
+  -webkit-transform: translate(80%, -50%);
+  transform: translate(80%, -50%);
+}
+.switch-input:checked + .switch-label .toggle--on {
+  display: inline-block;
+}
+.switch-input:checked + .switch-label .toggle--off {
+  display: none;
+}
