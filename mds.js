@@ -25,9 +25,9 @@ let buttons = document.querySelectorAll('button');
 
 function disable(){
   for(let all of buttons){
-    let disall = document.querySelector('input, checkbox');
     all.addEventListener('click',()=>{
-      disall.setAttribute("disabled" = true)
+      let disall = document.querySelector('input, checkbox');
+      disall.setAttribute("disabled", true)
       console.log(disall);
     })
   }
