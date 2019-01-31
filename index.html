@@ -4,41 +4,76 @@
     <meta charset="utf-8">
     <script src="mds.js" defer></script>
     <link rel="stylesheet" href="mds.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title></title>
   </head>
   <body>
+    <!-- TEXTFIELD -->
 
-    <div class="mds-text-field">
+    <div class="mds-container__main">
+      <header>
+        <h1>UX</h1>
+      </header>
+      <div class="mds-text-field">
+        <label for="NAME" class="mds-text-field__label">NAME</label>
+          <input type="text" name="NAME" class="mds-text-field__input">
+            <span class="mds-text-field__underline"></span> <br>
+      </div>
 
-      <label for="Title" class="mds-text-field__label">NAME</label>
-        <input type="text" name="Title" class="mds-text-field__input">
-          <span class="mds-text-field__underline"></span> <br><br>
 
-        <input type="text" name="lastname" class="mds-text-field__input" placeholder="Lastname">
-          <span class="mds-text-field__underline"></span><br><br>
 
-      <input type="checkbox" id="id-name--1" name="set-name" class="switch-input">
-        <label for="id-name--1" class="switch-label">On/Off</label> <br><br>
+      <!-- SWITCH  -->
+
+      <input type="checkbox" id="switch" name="set-name" class="mds-switch__input">
+        <label for="switch" class="mds-switch__label">On/Off</label> <br><br>
+
+
+        <!-- RADIOBUTTON -->
 
       <label class="mds-radio-btn" for="mds-radio__css1">
-        <input type="radio" name="css" id="mds-radio__css1" value="position" checked />
-          <span class="mds-radio__outer">
+        <input type="radio" name="css" id="mds-radio__css1" value="position" checked/>
+         <span class="mds-radio__outer">
           <span class="mds-radio__inner"></span>
-        </span>
-        Cat
-      </label>
+            </span>
+              Cat
+            </label>
 
 
       <label class=".mds-radio-btn" for="mds-radio__css2">
         <input type="radio" name="css" id="mds-radio__css2" value="transform" />
-        <span class="mds-radio__outer">
-          <span class="mds-radio__inner"></span>
-        </span>
-        Dogs
-      </label>
+          <span class="mds-radio__outer">
+            <span class="mds-radio__inner"></span>
+            </span>
+              Dogs
+            </label>
 
-    </div>
+      <!-- CHECKBOX -->
+
+
+        <label class="mds-checkbox__label">
+          <input type="checkbox">
+          <span></span>
+          Checkme
+          </label>
+
+        <label class="mds-checkbox__label">
+          <input type="checkbox">
+            <span></span>
+           NoCheckme
+        </label><br><br>
+
+
+      <!-- Disable -->
+
+      </div>
+        <div class="button">
+          <button onclick="disable()" class="mds-disable__button">Disable all</button>
+            <button class="mds-enable__button">Enable all</button>
+        </div>
+
+
+
 
   </body>
 </html>
