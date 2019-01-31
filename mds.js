@@ -21,20 +21,39 @@ textfield.addEventListener('blur', () =>{
 })
 
 
-
-let disall = document.querySelectorAll(".mds-text-field__input , .mds-checkbox__label , .mds-radio-btn")
-console.log(disall)
-
-
-
-
 function disable(){
-  for(let all of disall){
-    let buttons = document.getElementsByClassName('mds-disable__button');
-    buttons.addEventListener('click',()=>{
-      all.setAttribute("disabled", true)
-      console.log(buttons);
-    })
+let distext = document.querySelectorAll("input")
+for (let all of distext){
+  all.setAttribute("disabled", true);
+  console.log(all);
+
+
+
   }
+  let labels = document.querySelectorAll('label');
+    for(let label of labels) {
+      label.style.opacity = '0.2'
+    }
 
 }
+
+function enable(){
+let distext = document.querySelectorAll("input")
+for (let all of distext){
+  all.removeAttribute("disabled");
+  console.log(all);
+
+  }
+  let labels = document.querySelectorAll('label');
+    for(let label of labels) {
+      label.style.opacity = '1'
+    }
+}
+
+
+
+let button = document.querySelector('.mds-disable__button')
+button.addEventListener('click', disable)
+
+let buttonenable = document.querySelector('.mds-enable__button')
+buttonenable.addEventListener('click', enable)

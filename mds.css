@@ -35,36 +35,47 @@ h1 {
   display: block;
 
 
+
+}
+
+
+.mds-text-field__underline:disabled {
+  opacity: 0.2;
+
 }
 
 .mds-text-field__input{
 padding: 12px;
 padding-left: 4px;
+padding-top: 20px;
 outline:0;
 font-size: 16px;
 border:0;
-
-background-color: #0080FF;
-color:white;
+background-color: #E6E6E6;
+color:black;
+height: 15px;
+width: 200px;
+border-top-left-radius: 3px;
+border-top-right-radius: 3px;
 }
 
 
 .mds-text-field__label {
   position: absolute;
   transition: all .2s ease-in-out;
-  top: 10px;
+  top: 17px;
   left: 12px;
   pointer-events: none;
-  color: white;
+  color: black;
   opacity: 0.7;
   font-size: 16px;
 
 }
 
 .mds-text-field__label.active{
-  top: -10px;
+  top: 0px;
   left: -2px;
-  transform: translate(0, 16px) scale(1.2);
+  transform: translate(0, 16px) scale(1);
   transform: translate(0, -2px) scale(.70);
   color:#3700b3;
   opacity: 1;
@@ -86,6 +97,11 @@ color:white;
   transition: all 200ms ease-in;
 
 
+}
+
+.mds-text-field__input:disabled{
+  opacity: 0.2;
+  background-color: red;
 }
 
 
@@ -152,6 +168,11 @@ color:white;
 }
 .mds-switch__input:checked + .mds-switch__label .toggle--off {
   display: none;
+}
+
+.mds-switch__label:checked:disabled + .mds-switch__label:before{
+  opacity: 0.6;
+  background-color: red;
 }
 
 
@@ -276,6 +297,7 @@ button {
   top: 300px;
   top: 50%;
   font-family: Roboto;
+
 
 
 
