@@ -20,15 +20,20 @@ textfield.addEventListener('blur', () =>{
   }
 })
 
-let buttons = document.querySelectorAll('button');
+
+
+let disall = document.querySelectorAll(".mds-text-field__input , .mds-checkbox__label , .mds-radio-btn")
+console.log(disall)
+
+
 
 
 function disable(){
-  for(let all of buttons){
-    all.addEventListener('click',()=>{
-      let disall = document.querySelector('input, checkbox');
-      disall.setAttribute("disabled", true)
-      console.log(disall);
+  for(let all of disall){
+    let buttons = document.getElementsByClassName('mds-disable__button');
+    buttons.addEventListener('click',()=>{
+      all.setAttribute("disabled", true)
+      console.log(buttons);
     })
   }
 
